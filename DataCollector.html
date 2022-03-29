@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="author" content="Bartis Vivien">
+    
+
+    <title>Data collector</title>
+
+
+<style>
+      html, body {
+      	min-height: 100%;
+      }
+
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 20;
+      outline: none;
+      font-family: Lucida Handwriting;
+      font-size: 14px;
+      color:  #000000; //black
+      }
+
+      h1 {
+      margin: 2;
+      font-weight: 400;
+      }
+
+      h3 {
+      margin: 12px 0;
+      color: #774936;
+      }
+
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #b2967d;
+      }
+
+      form {
+      width: 100%;
+      padding: 20px;
+      }
+
+      fieldset {
+      border: none;
+      border-top: 1px solid #774936;
+      }
+
+      .personal-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+
+      .personal-details >div >div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      }
+
+      .personal-details >div, input, label
+	 {
+      width: 100%; }
+
+      label {
+      padding: 0 5px;
+      text-align: right;
+      vertical-align: middle;
+      }
+
+      input {
+      padding: 5px;
+      vertical-align: middle;
+      }
+      .checkbox {
+      margin-bottom: 10px;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(100% + 26px);
+      padding: 5px 0;
+      }
+
+      select {
+      background: #774936;
+      }
+
+      .gender input {
+      width: auto;
+      } 
+
+      .gender label {
+      padding: 0 5px 0 0;
+      } 
+
+      .bdate-block {
+      display: flex;
+      justify-content: space-between;
+      }
+  
+      .birthdate input {
+      width: 140px;
+      vertical-align: unset;
+	background: #774936;
+      }
+
+      .checkbox input, .children input {
+      width: auto;
+      margin: -2px 14px 0 0;
+      }
+
+    .msg label {
+	padding: -1px 5px 0 0;
+	vertical-align: top;
+	}
+
+      button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #774936; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+
+      button:hover {
+      		background: #774936;
+      }
+
+   
+      label {
+      		width: 40%;
+      }
+      input {
+     		 width: 60%;
+      }
+      select, .stud, .gender, .bdate-block, .msg
+	 {
+      		width: calc(60% + 16px);
+          }
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-block">
+   
+<form method="POST" target="_blank" name="regForm" class="form" action="https://helios.utcluj.ro/cosmin/WEB/responders/post_responder.php">
+      <h1>Electronic data collector</h1>
+      <fieldset>
+        <legend>
+          <h3>Personal details</h3>
+        </legend>
+        <div  class="account-details">
+          <div><label>Email*</label><input type="text" name="name" required></div>
+            <div><label>First Name*</label><input type="text" name="name" required></div>
+	    <div><label>Last Name*</label><input type="text" name="name" required></div>
+            <div><label>Phone*</label><input type="text" name="name" required></div>
+           
+	   <div>
+              <label>Favourite programming language*</label>  
+              <select>
+                <option value=""></option>
+                <option value="C/C++">C/C++</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+  		 <option value="None">None</option>
+              </select>
+            </div>
+
+          <div>
+            <div>
+              <label>Gender*</label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="gender" required/>
+                <label for="male" class="radio">Male</label>
+                <input type="radio" value="none" id="female" name="gender" required/>
+                <label for="female" class="radio">Female</label>
+              </div>
+            </div>
+
+            <div class="birthdate">
+	<label>Birthdate*</label>
+	<input type="date" class="input_field" id="birthdate" placeholder="mm/dd/yyyy" name="birthdate" required><br>
+              </div>
+            </div>
+            
+         
+            <div>
+              <label>Are you a student?*</label>
+              <div class="stud"><input type="checkbox" name="name" required></div>
+            </div>
+
+	<div class="msg">
+	<br>
+	<label>Observation</label>
+	<textarea placeholder="Obs..." rows="5"></textarea>
+          </div>
+        </div>
+      </fieldset>
+     
+      <button type="submit" href="/">Submit</button>
+    </form>
+    </div> 
+  </body>
+</html>
